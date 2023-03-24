@@ -24,6 +24,51 @@
       "nombre": "Jugo de Fresa",
       "precio": "200",
       "id": 5
+    },
+    {
+      "nombre": "Agua",
+      "precio": 100,
+      "id": 6
+    },
+    {
+      "nombre": "Agua",
+      "precio": 400,
+      "id": 7
+    },
+    {
+      "nombre": "Tierra",
+      "precio": 200,
+      "id": 8
+    },
+    {
+      "nombre": "Comida",
+      "precio": 100,
+      "id": 9
+    },
+    {
+      "nombre": "Comida",
+      "precio": 100,
+      "id": 10
+    },
+    {
+      "nombre": "Harina",
+      "precio": 50,
+      "id": 11
+    },
+    {
+      "nombre": "Harina",
+      "precio": 50,
+      "id": 12
+    },
+    {
+      "nombre": "Harina",
+      "precio": 50,
+      "id": 13
+    },
+    {
+      "nombre": "Harina",
+      "precio": 50,
+      "id": 14
     }
   ]
 }
