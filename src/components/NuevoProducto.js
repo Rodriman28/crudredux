@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 //!! Cuando el usuario haga submit
 
-const NuevoProducto = () => {
+const NuevoProducto = ({ history }) => {
   // State local
   const [nombre, setNombre] = useState("");
   const [precio, setPrecio] = useState(0);
@@ -18,10 +18,7 @@ const NuevoProducto = () => {
   const cargando = useSelector((state) => state.productos.loading);
   const error = useSelector((state) => state.productos.error);
 
-  console.log("cargando ", cargando);
-  console.log("error ", error);
-
-  // mandar llamar el aciton de productoAction
+  // mandar llamar el action de productoAction
   const agregarProducto = (producto) =>
     dispatch(crearNuevoProductoAcion(producto));
 
@@ -37,6 +34,8 @@ const NuevoProducto = () => {
 
     //* Crear nuevo producto
     agregarProducto({ nombre, precio });
+
+    history.push("/");
   };
   return (
     <div className="row justify-content-center">
@@ -80,10 +79,12 @@ const NuevoProducto = () => {
               </button>
             </form>
 
-            {cargando ? <h1>Cargando...</h1> : null}
-            {error ? (
-              <p className="alert alert-danger p2">Hubo un error</p>
-            ) : null}
+            {cargando && <h3 className="text-center mt-4">Cargando...</h3>}
+            {error && (
+              <p className="alert alert-danger p2 mt-4 text-center">
+                Hubo un error
+              </p>
+            )}
           </div>
         </div>
       </div>

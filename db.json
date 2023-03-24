@@ -69,6 +69,21 @@
       "nombre": "Harina",
       "precio": 50,
       "id": 14
+    },
+    {
+      "nombre": "Jugo de piña",
+      "precio": 200,
+      "id": 15
+    },
+    {
+      "nombre": "Jugo de piña",
+      "precio": 300,
+      "id": 16
+    },
+    {
+      "nombre": "Harina",
+      "precio": 300,
+      "id": 17
     }
   ]
 }
