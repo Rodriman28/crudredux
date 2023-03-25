@@ -1,6 +1,35 @@
-import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { editarProductoAction } from "../actions/productoActions";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const EditarProducto = () => {
+  const [producto, setProducto] = useState({ nombre: "", precio: "" });
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const productoEditar = useSelector((state) => state.productos.productoEditar);
+
+  useEffect(() => {
+    setProducto(productoEditar);
+  }, [productoEditar]);
+
+  const onChangeFormulario = (e) => {
+    setProducto({
+      ...producto,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const { nombre, precio } = producto;
+
+  const submitEditarProducto = (e) => {
+    e.preventDefault();
+
+    dispatch(editarProductoAction(producto));
+
+    navigate("/");
+  };
+
   return (
     <div className="row justify-content-center">
       <div className="col-md-8">
@@ -10,10 +39,12 @@ const EditarProducto = () => {
               Editar Producto
             </h2>
 
-            <form>
+            <form onSubmit={submitEditarProducto}>
               <div className="form-group">
                 <label htmlFor="nombre">Nombre Producto</label>
                 <input
+                  onChange={onChangeFormulario}
+                  value={nombre}
                   type="text"
                   name="nombre"
                   id="nombre"
@@ -24,6 +55,8 @@ const EditarProducto = () => {
               <div className="form-group">
                 <label htmlFor="precio">Precio Producto</label>
                 <input
+                  onChange={onChangeFormulario}
+                  value={precio}
                   type="number"
                   name="precio"
                   id="precio"

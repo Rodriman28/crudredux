@@ -1,38 +1,13 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
-    },
-    {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "1"
-    },
-    {
-      "nombre": "Jugo de Naranja",
-      "precio": "300",
+      "nombre": "Jugo de Naranja 2",
+      "precio": "50",
       "id": 3
     },
     {
-      "nombre": "Rib Eye 800g",
-      "precio": "200",
-      "id": 4
-    },
-    {
-      "nombre": "Jugo de Fresa",
-      "precio": "200",
-      "id": 5
-    },
-    {
       "nombre": "Agua",
-      "precio": 100,
-      "id": 6
-    },
-    {
-      "nombre": "Agua",
-      "precio": 400,
+      "precio": "100",
       "id": 7
     },
     {
@@ -46,24 +21,9 @@
       "id": 9
     },
     {
-      "nombre": "Comida",
-      "precio": 100,
-      "id": 10
-    },
-    {
       "nombre": "Harina",
       "precio": 50,
       "id": 11
-    },
-    {
-      "nombre": "Harina",
-      "precio": 50,
-      "id": 12
-    },
-    {
-      "nombre": "Harina",
-      "precio": 50,
-      "id": 13
     },
     {
       "nombre": "Harina",
@@ -84,6 +44,21 @@
       "nombre": "Harina",
       "precio": 300,
       "id": 17
+    },
+    {
+      "nombre": "Agua",
+      "precio": 1000,
+      "id": 18
+    },
+    {
+      "nombre": "Harina",
+      "precio": 1000,
+      "id": 19
+    },
+    {
+      "nombre": "Agua",
+      "precio": 50000,
+      "id": 20
     }
   ]
 }

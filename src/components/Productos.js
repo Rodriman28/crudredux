@@ -11,11 +11,12 @@ const Productos = () => {
     //* Consultar la api
     const cargarProductos = () => dispatch(obtenerProductosAction());
     cargarProductos();
-  }, []);
+  }, [dispatch]);
 
   //* Obtener el state
   const productos = useSelector((state) => state.productos.productos);
   const error = useSelector((state) => state.productos.error);
+  const cargando = useSelector((state) => state.productos.loading);
 
   return (
     <Fragment>
@@ -26,6 +27,7 @@ const Productos = () => {
           Hubo un error
         </p>
       )}
+      {cargando && <h3 className="text-center">Cargando...</h3>}
 
       <table className="table table-striped">
         <thead className="bg-primary table-dark">
